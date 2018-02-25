@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.android.giftcard.MainActivity">
+
+        <EditText
+            android:id="@+id/sender_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:drawableLeft="@drawable/person_identity"
+            android:hint="Sender's Name"
+            android:inputType="textCapWords"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:typeface="sans"
+            />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Receiver's Name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:id="@+id/receiver_text_view"
+        android:inputType="textCapWords"
+        android:layout_below="@id/sender_text_view"
+        android:drawableLeft="@drawable/person_identity"
+        android:gravity="center"
+        android:ems="10"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Select:"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@id/receiver_text_view"
+        android:id="@+id/select_text_view"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/spinner_title"
+        android:layout_below="@id/select_text_view"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/card_spinner_view"
+        android:layout_marginRight="120dp"
+        android:spinnerMode="dropdown"
+        android:theme="@style/TextAppearance.AppCompat.Headline"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Card"
+        android:layout_marginBottom="36dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/make_button"
+        android:layout_alignParentBottom="true"
+        android:onClick="selectCard"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button"
+        android:textStyle="bold"
+        android:padding="10dp"
+        />
+
+</RelativeLayout>
